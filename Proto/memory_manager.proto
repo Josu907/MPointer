@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package memory_manager;
+
+service MemoryManagerService {
+  rpc Create(AllocateRequest) returns (AllocateResponse);
+  rpc IncreaseRefCount(ReferenceRequest) returns (Empty);
+  rpc DecreaseRefCount(ReferenceRequest) returns (Empty);
+  rpc Set(SetRequest) returns (SetResponse);
+  rpc Get(GetRequest) returns (GetResponse);
+}
+
+message AllocateRequest {
+  int32 size = 1;
+}
+
+message AllocateResponse {
+  int32 id = 1;
+  bool success = 2;
+  string error_message = 3;
+}
+
+message ReferenceRequest {
+  int32 id = 1;
+}
+
+message Empty {}
+
+message SetRequest {
+  int32 id = 1;
+  bytes data = 2;
+}
+
+message SetResponse {
+  bool success = 1;
+  string error_message = 2;
+}
+
+message GetRequest {
+  int32 id = 1;
+}
+
+message GetResponse {
+  bytes data = 1;
+  bool success = 2;
+  string error_message = 3;
+}
