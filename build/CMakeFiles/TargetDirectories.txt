@@ -1,3 +1,0 @@
-/home/justin/Documentos/GitHub/MPointer/build/CMakeFiles/mem-mgr.dir
-/home/justin/Documentos/GitHub/MPointer/build/CMakeFiles/edit_cache.dir
-/home/justin/Documentos/GitHub/MPointer/build/CMakeFiles/rebuild_cache.dir
