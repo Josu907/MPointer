@@ -51,7 +51,7 @@ void MemoryManager::dumpMemory(const std::string& operation) {
 
     std::ofstream file(filename.str());
     if (!file.is_open()) {
-        std::cerr << GREEN << "[MemoryManager] ⚠️ No se pudo crear el archivo de dump: " << filename.str() << RESET << std::endl;
+        std::cerr << GREEN << "[MemoryManager]  No se pudo crear el archivo de dump: " << filename.str() << RESET << std::endl;
         return;
     }
 

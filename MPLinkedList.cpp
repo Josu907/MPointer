@@ -22,7 +22,7 @@ void MPLinkedList::print() {
     std::cout << "[MPLinkedList] Lista actual: ";
     while (!current.isNull()) {
         if (contador++ > 100) {
-            std::cout << "\n⚠️ [MPLinkedList] Límite de nodos excedido. Posible ciclo o corrupción.\n";
+            std::cout << "\n [MPLinkedList] Límite de nodos excedido. Posible ciclo o corrupción.\n";
             break;
         }
 
@@ -34,13 +34,13 @@ void MPLinkedList::print() {
             if ((&current != &nodo.next) && ((&current) != (&nodo.next))) {
                 current = nodo.next;
             } else {
-                std::cout << "\n❌ [MPLinkedList] Nodo apunta a sí mismo. Fin anticipado para evitar bucle.\n";
+                std::cout << "\n [MPLinkedList] Nodo apunta a sí mismo. Fin anticipado para evitar bucle.\n";
                 break;
             }
             
 
         } catch (const std::exception& e) {
-            std::cout << "\n❌ [MPLinkedList] Error al acceder a nodo: " << e.what() << "\n";
+            std::cout << "\n [MPLinkedList] Error al acceder a nodo: " << e.what() << "\n";
             break;
         }
     }

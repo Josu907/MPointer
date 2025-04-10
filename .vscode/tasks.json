@@ -11,7 +11,7 @@
                 "-g3",
                 "main.cpp",
                 "MemoryManager.cpp",
-                "MPLinkedList.cpp",       // ✅ Añadido
+                "MPLinkedList.cpp",       
                 "-o",
                 "output/main"
             ],
