@@ -1,0 +1,26 @@
+#include "MemoryManager.h"
+#include "MPointer.h"
+#include "MPLinkedList.h"
+#include <iostream>
+#include <filesystem>
+
+int main() {
+    std::filesystem::create_directory("dumps");
+
+    std::cout << "[Main] Iniciando prueba de MPLinkedList...\n";
+    MemoryManager memMgr(1);
+    memMgr.setDumpFolder("dumps");
+    MPointer<Node>::Init(&memMgr);
+
+    MPLinkedList lista;
+    lista.insert(10);
+    lista.insert(20);
+    lista.insert(30);
+
+    std::cout << "[Main] Imprimiendo lista:\n";
+    lista.print();
+
+    std::cout << "\n[Main] Fin de prueba de lista enlazada.\n";
+    return 0;
+}
+

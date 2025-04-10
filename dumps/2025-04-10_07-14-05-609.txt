@@ -1,0 +1,7 @@
+[Memory Dump - 2025-04-10 07:14:05.609]
+Operación: create
+Memoria total: 1048576 bytes
+Memoria utilizada: 4 bytes
+Memoria libre: 1048572 bytes
+
+Bloque ID: 1 | Offset: 0 | Tamaño: 4 | RefCount: 1 | Estado: OCUPADO

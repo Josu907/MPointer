@@ -30,7 +30,7 @@ void MPLinkedList::print() {
             Node nodo = *current;
             std::cout << nodo.data << " -> ";
 
-            // ✅ Asignar solo si ID cambia, para evitar liberar referencias aún activas
+            // Asignar solo si ID cambia, para evitar liberar referencias aún activas
             if ((&current != &nodo.next) && ((&current) != (&nodo.next))) {
                 current = nodo.next;
             } else {

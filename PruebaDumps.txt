@@ -1,0 +1,30 @@
+#include "MemoryManager.h"
+#include "MPointer.h"
+#include <iostream>
+#include <filesystem>
+
+int main() {
+    std::filesystem::create_directory("dumps");
+
+    std::cout << "[Main] Iniciando prueba de generación de dumps...\n";
+    MemoryManager memMgr(1);
+    memMgr.setDumpFolder("dumps");
+    MPointer<int>::Init(&memMgr);
+
+    MPointer<int> ptr = MPointer<int>::New();
+    ptr.set(123);
+
+    MPointer<int> copia = ptr;
+    copia.set(456);
+
+    ptr = copia;
+
+    std::cout << "[Main] Acceso final: " << *ptr << std::endl;
+
+    std::cout << "[Main] Recolección de basura...\n";
+    memMgr.collectGarbage();
+
+    std::cout << "[Main] Fin de prueba de dumps.\n";
+    return 0;
+}
+
